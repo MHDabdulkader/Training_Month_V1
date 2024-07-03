@@ -1,0 +1,683 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+:root{
+    --red: #ff2002;
+    --violet: #bd3bfa;
+}
+
+
+*{
+    font-family: 'Roboto', sans-serif;
+    text-transform: capitalize;
+    text-decoration: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::selection{
+    background: var(--red);
+    color: #fff;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+
+
+header{
+    width:  96%;
+    background: #fff;
+
+    position: fixed;
+    top: 2rem; 
+    /* Header ke 50% left nibe */
+    left: 50%;
+    /* Header ke majke nibe */
+    transform: translateX(-50%);
+    border-radius: 5rem;
+    display: flex;
+    align-items: center;
+    /* content majkane space dibe */
+    justify-content: space-between;
+
+    /* header item golo te space asbe */
+    padding: 1rem 2rem;
+    z-index: 1000;
+
+    transition: .2s;
+}
+
+.header-active{
+    top: 0;
+    width: 100%;
+    border-radius: 0;
+    box-shadow: 0 .1rem .3rem rgba(0, 0, 0, .3);
+}
+
+header .NavBar ul{
+    /* Nav bar item golo r list bolet chole jabe */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    /* padding: 1rem; */
+}
+
+header .NavBar ul li{
+    /* shob nav item space dibe */
+    margin: 0 1rem;
+}
+
+header .NavBar ul li a{
+    font-size: 2rem;
+    color: var(--red);
+    transition: color 0.3s, font-weight 0.3s;
+}
+header .NavBar ul li .active,
+header .NavBar ul li a:hover{
+    color: var(--violet);
+    font-weight: bold;
+}
+
+header .Logo{
+    font-size: 2.5rem;
+    color: var(--violet);
+    text-transform: uppercase;
+   
+}
+header .Logo i{
+    color: var(--red);
+    padding: 0 .3rem;
+}
+
+
+
+.Home{
+    min-height: 100vh;
+    background: linear-gradient(rgba(255, 217, 215, 0.8), rgba(240,156,152, .8)), url(./img/BgImg-school-supplies.jpg)
+    no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.Home .HomeContent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-flow: column;
+    padding-top: 14rem;
+    padding-bottom: 8rem;
+    text-align: center;
+
+}
+
+.Home .HomeContent h1{
+    font-size: 5rem;
+    color: #26550b;
+    padding: 0 1rem;
+    text-shadow: 0 .3rem .5rem rgba(0, 0, 0, .3);
+    text-transform: uppercase;
+}
+
+.Home .HomeContent p{
+    font-size: 2rem;
+    color: #696969;
+    padding:  1rem 25rem;
+
+}
+
+.Home .HomeContent button{
+    height: 4rem;
+    width: 20rem;
+    border-radius: 5rem;
+    color: #fff;
+    background: var(--red);
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: .2s;
+    /* padding: 1rem; */
+    border: none;
+    box-shadow: 0 .3rem 1rem rgba(0, 0, 0, .3);
+}
+
+.Home .HomeContent button:hover{
+    letter-spacing: .2rem;
+    
+}
+
+.Home .BoxContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* gap: 2rem; */
+}
+.Home .BoxContainer .box{
+
+    height: 20rem;
+    width: 25rem;
+    background: #fff;
+    text-align: center;
+    border-radius: 1rem;
+    
+    box-shadow: 0 .3rem .5rem rgba(0, 0, 0, .8);
+
+    margin: 2rem;
+    cursor: pointer;
+}
+.Home .BoxContainer .box i{
+   
+    height: 6rem;
+    width: 6rem;
+    line-height: 6rem;
+    border-radius: 50%;
+    background: var(--red);
+    color: #fff;
+    text-align: center;
+    font-size: 3rem;
+    transition: .2s;
+
+    margin: 2rem 0;
+
+}
+
+
+.Home .BoxContainer .box h3{
+
+    font-size: 2rem;
+    color: var(--red);
+    transition: .2s;
+}
+
+.Home .BoxContainer .box p{
+    font-size: 1.3rem;
+    padding: .7rem 2rem;
+    color: #666;
+}
+.Home .BoxContainer .box:hover i{
+    background: #bd3bfa;
+    box-shadow: 0 .3rem .5rem rgba(0, 0, 0, .5);
+}
+.Home .BoxContainer .box:hover h3{
+    color: #bd3bfa;
+    /* box-shadow: 0 .3rem .5rem rgba(0, 0, 0, .3); */
+}
+
+/* Home layer e niche angulaer part */
+.Home::before{
+    content: '';
+    position: absolute;
+    bottom: -25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top: 70vh solid #fff;
+    width: 120%;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+/* about section css */
+.Heading{
+    font-size: 4rem;
+    text-align: center;
+    color: var(--red);
+    padding: 0 1rem;
+    padding-top: 6rem;
+    letter-spacing: .2rem;
+    font-weight: 500;
+}
+
+.Title{
+    text-align: center;
+    font-size: 2rem;
+    /* line-height: 2rem; */
+    padding: 0 1rem;
+    font-weight: 400;
+    color: #aaa;
+}
+
+.About .Rows{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.About .Rows .Containt{
+    padding-left: 5rem;
+}
+.About .Rows .Containt h3{
+    color: var(--red);
+    font-size: 3rem;
+}
+
+.About .Rows .Containt p{
+    color: #999;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    /* cursor: zoom-in; */
+}
+
+.About .Rows .Containt button{
+    font-size: 2rem;
+    height: 3.5rem;
+    width: 20rem;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    background: var(--violet);
+    color: #fff;
+    box-shadow: 0 .3rem 1rem rgba(0, 0, 0, .3);
+    transition: .2s;
+}
+.About .Rows .Containt button:hover{
+    letter-spacing: .1rem;
+}
+
+.About .Rows .image img{
+    height: 70vh;
+    width: 50vw;
+}
+
+
+.Teacher{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2rem;
+    flex-direction: column;
+    padding: 0 1rem;
+    padding-top: 6rem;
+}
+.Teacher .Heading{
+    font-size: 4rem;
+    color: var(--red);
+    padding: 0 1.5rem ;
+    text-align: center;
+}
+.Teacher .Title{
+    color: #999;
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 50%;
+    padding: 0 1rem;
+}
+.Teacher .CardContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    gap: 1rem;
+}
+
+.Teacher .CardContainer .Card{
+    /* position: relative; */
+    padding: 2rem;
+    margin: 2rem;
+    background: #fff;
+    text-align: center;
+    box-shadow: 0 .1rem 2rem rgba(0, 0, 0, .1);
+    width: 28rem;
+    border-radius: 2rem 0rem 1rem 0rem;
+    
+}
+
+.Teacher .CardContainer .Card img{
+    height: 30rem;
+    width: 100%;
+    object-fit: cover;
+    filter:grayscale();
+    transform: .2s;
+}
+.Teacher .CardContainer .Card:hover img{
+    filter: grayscale(0);
+}
+.Teacher .CardContainer .Card h3{
+    color: var(--violet);
+    font-size: 2rem;
+    padding: .5rem 0;
+}
+.Teacher .CardContainer .Card p{
+    color: #aaa;
+    font-size: 1.5rem;
+    padding: .3rem 0;
+}
+
+
+.Teacher .CardContainer .Card .icon a{
+  
+   
+     color:  var(--red);
+     padding: 1.5rem .5rem;
+     font-size: 1.7rem;
+}
+
+.Teacher .CardContainer .Card .icon a:hover{
+    color: var(--violet);
+    cursor: pointer;
+    
+}
+
+.Course .BoxContainer{
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding-top: 4rem;
+    flex-wrap: wrap;
+}
+
+.Course .BoxContainer .Box{
+    width: 25rem;
+    height: 18rem;
+    margin: 3.5rem 2rem;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: .3rem .3rem 0 .05rem var(--violet),
+                .5rem .5rem .5rem rgba(0, 0, 0, .3);
+}
+
+
+.Course .BoxContainer .Box i{
+    height: 10rem;
+    width: 10rem;
+    line-height: 8rem;
+    text-align: center;
+    color: gold;
+    border-radius: 50%;
+    background: var(--red);
+    margin-top: -4rem;
+    border: 1rem solid #fff;
+
+    border-left: 1rem solid var(--red);
+    border-right: 1rem solid var(--red);
+
+    box-shadow: 0 0 0 1rem #fff inset;
+
+    font-size: 3.5rem;
+}
+
+.Course .BoxContainer .Box h1{
+    font-size: 2rem;
+    color: var(--violet);
+}
+
+.Course .BoxContainer .Box p{
+    font-size: 1.5rem;
+    color: #999;
+    padding: 1rem 1rem ;
+}
+
+.Review{
+    background: #fff6f6;
+}
+
+.Review .BoxContainer{
+    display: flex;
+    justify-content: center;
+    padding-top: 4rem;
+    flex-wrap: wrap;
+    
+}
+
+.Review .BoxContainer .Box{
+    width: 28rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    background: #ffffff;
+    
+    box-shadow: 0 .3rem .5rem rgba(0, 0, 0, .8);
+    margin:  4rem 2rem;
+}
+
+.Review .BoxContainer .Box img{
+    height: 15.5rem;
+    width: 15.5rem;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: -4rem;
+    border: .6rem solid goldenrod;
+    border-left: .6rem solid gold;
+    border-bottom: .6rem solid gold;
+}
+
+.Review .BoxContainer .Box h1{
+    font-size: 2rem;
+    color: var(--red);
+    padding: 0 .5rem ;
+}
+
+.Review .BoxContainer .Box p{
+    font-size: 1rem;
+    text-align: center;
+    color: #999;
+    padding: .5rem 1rem;
+}
+.Review .BoxContainer .Box i{
+    color: gold;
+    font-size: 1.5rem;
+    padding: 1.3rem .1rem;
+}
+
+.Contact{
+    background: #333;
+}
+
+.Contact .Row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding:  5rem 0;
+}
+
+
+.Contact .Row .image img{
+    width: 50vw;
+    height: 70vh;
+    
+}
+
+.Contact .Row .FormContainer{
+    width: 50%;
+    padding-right: 6rem;
+}
+
+.Contact .Row .FormContainer input, textarea{
+    height: 4rem;
+    width: 100%;
+    background: #fff;
+    border: none;
+    border-radius: 5rem;
+    padding: 0 1rem;
+    margin: 1rem 0;
+
+    color: var(--red);
+    font-size: 2rem;
+    transform: .2s linear;
+    /* text-align: left; */
+}
+
+.Contact .Row .FormContainer input:focus, textarea:focus{
+    border: .5rem solid var(--violet);
+}
+
+.Contact .Row .FormContainer  textarea{
+    height: 14rem;
+    padding:1rem;
+    border-radius: 1rem;
+    resize: none;
+    /* user-select: all; */
+}
+.Contact .Row .FormContainer input[type="submit"]{
+    width: 17rem;
+    background: var(--red);
+    cursor: pointer;
+    color: #fff;
+    font-size: 2rem;
+    transition: .2s;
+
+}
+
+.Contact .Row .FormContainer input[type="submit"]:hover{
+    background: var(--violet);
+    letter-spacing: .1rem;
+}
+
+
+.Footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    
+}
+.Footer .icons a{
+    width: 4.5rem;
+    height: 4.5rem;
+    line-height: 4.2rem;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 2rem;
+    margin: 1rem 0;
+    color: var(--red);
+    transition: .2s linear;
+
+    border: .2rem solid var(--violet);
+}
+.Footer .icons a:hover{
+    color: gold;
+    background: var(--red);
+    border: .2rem solid var(--red);
+}
+.Footer  .Credit{
+    /* margin: 0 auto; */
+    font-size: 2rem;
+    border-top: .1rem solid #333;
+    /* margin-bottom: 2rem; */
+    color: #666;
+    text-align: center;
+    width: 90%;
+    padding: 1rem 0;
+    
+}
+
+.Footer  .Credit span{
+    font-style: italic;
+    font-weight: 600;
+    color: var(--red);
+}
+
+
+
+
+
+
+header .fa-bars{
+    font-size: 3rem;
+    color: var(--red);
+    cursor: pointer;
+    /* transform: rotate(180deg); */
+    transition: .2s;
+    /* hide on full screen */
+    display: none;
+}
+
+
+
+
+header .fa-times{
+    transform: rotate(180deg);
+    color: var(--violet);
+    transition: .2s;
+}
+
+/* Media query:  */
+@media (max-width:768px){
+    html{
+        font-size: 55%;
+    }
+
+    header .fa-bars{
+        display: block;
+    }
+    header .NavBar{
+        position: fixed;
+        top: -100rem;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        border-radius: 1rem;
+        opacity: 0;
+        /* transform: .2s; */
+    }
+    header .NavBar ul{
+        flex-flow: column;
+        padding: 2rem 0;
+    }
+    header .NavBar ul li{
+        margin: 1rem 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    header .NavBar ul li a{
+        font-size: 2.3rem;
+        display: block;
+    }
+
+    header .nav-toggle{
+        top: 5.7rem;
+        opacity: 100%;
+    }
+
+    .Home .HomeContent p{
+        padding: 1.5rem 2rem;
+    }
+    .Home::before{
+        display: none;
+    }
+
+    .About .Rows{
+        flex-flow: column-reverse;
+        
+    }
+    .About .Rows .image img{
+        height: 60vh;
+        width: 90vw;
+    }
+    .About .Rows .Containt{
+        padding: 0  2.8rem ;
+       
+    }
+    .Course .BoxContainer{
+        width: 100%;
+        /* box-shadow: 0 1rem 2rem rgba(0, 0, 0, .3); */
+    }
+
+    .Review .BoxContainer{
+        width: 100%;
+    }
+
+    .Contact .Row{
+        flex-flow: column;
+    }
+    .Contact .Row .image img{
+        width: 90vw;
+        height: 50vh;
+    }
+    .Contact .Row .FormContainer{
+        width: 90%;
+        padding: 0;
+    }
+    
+}
